@@ -1,7 +1,12 @@
 Feature: Substraction
-  We use a calculator that substract all the number passed
+  Calculator should be able to substract any quantity of numbers
 
-  Scenario: calculator resolves 90-100-10
-    Given numbers 90, 100, and 10
-    When the calculator resolves 90-100-10
-    Then the result is -20
+  Scenario: Calculator resolves the substraction of two numbers
+    Given numbers -57 and 23
+    When the calculator resolves -57-23
+    Then the result is -80
+
+  Scenario: Calculator resolves the substraction of three numbers
+    Given numbers 10, -5, and 20
+    When the calculator resolves 10-(-5)-20
+    Then the result is -15

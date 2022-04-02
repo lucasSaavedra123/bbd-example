@@ -8,7 +8,7 @@ def step_impl(context):
     a_calculator.insert(10)
     a_calculator.insert(97)
 
-@when('the calculator sums them')
+@when('the calculator sums these two numbers')
 def step_impl(context):
     a_calculator.sum()
 
