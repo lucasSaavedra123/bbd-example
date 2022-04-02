@@ -1,7 +1,12 @@
 Feature: Multiplication
-  We use a calculator that multiply any quantity of numbers
+  Calculator should be able to multiply any quantity of numbers
 
-  Scenario: multiply numbers 5, 9, and 10
+  Scenario: Calculator resolves the multiplication of two numbers
+    Given numbers 78 and 5
+    When the calculator multiplies them
+    Then the result is 390
+
+  Scenario: Calculator resolves the multiplication of three numbers
     Given numbers 5, 9, and 10
     When the calculator multiplies them
     Then the result is 450
