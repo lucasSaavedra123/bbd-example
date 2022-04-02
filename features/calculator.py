@@ -22,11 +22,13 @@ class Calculator():
                 self.__result *= number
 
     def divide(self):
-        if len(self.numbers) != 0:
-            if self.numbers[-1] != 0:
-                self.__result = self.numbers[-2] / self.numbers[-1] 
-            else:
-                self.__error = DivisionByZeroError()
+        if len(self.numbers) > 1 and 0 not in self.numbers:
+            self.__result = self.numbers[0]
+            for number in self.numbers[1:]:
+                self.__result = self.__result / number
+
+        if 0 in self.numbers:
+            self.__error = DivisionByZeroError()
 
     def result(self):
         self.numbers = []

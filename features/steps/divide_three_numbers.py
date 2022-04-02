@@ -3,15 +3,17 @@ from calculator import Calculator
 
 a_calculator = Calculator()
 
-@given('numbers 70 and 4')
+@given('numbers 100, -5, and -1')
 def step_impl(context):
-    a_calculator.insert(70)
-    a_calculator.insert(4)
+    a_calculator.insert(100)
+    a_calculator.insert(-5)
+    a_calculator.insert(-1)
 
-@when('the calculator resolve 70 divided by 4')
+@when('the calculator resolve (100/-5)/-1')
 def step_impl(context):
     a_calculator.divide()
 
-@then('the result is 17.5')
+@then('the result is 20')
 def step_impl(context):
-    assert a_calculator.result() == 17.5
+    result = a_calculator.result()
+    assert result == 20, result

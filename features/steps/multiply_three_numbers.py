@@ -9,7 +9,7 @@ def step_impl(context):
     a_calculator.insert(9)
     a_calculator.insert(10)
 
-@when('the calculator multiplies them')
+@when('the calculator multiplies these three numbers')
 def step_impl(context):
     a_calculator.multiply()
 
